@@ -1,9 +1,7 @@
-function App(){
-  return(
-    <>
-      <h1 className="bg-orange-500">{'hola mundo'}</h1>
-    </>
-  )
+import LoginPage from "./pages/login/LoginPage.jsx";
+
+function App() {
+  return <LoginPage />;
 }
 
-export default App
+export default App;
