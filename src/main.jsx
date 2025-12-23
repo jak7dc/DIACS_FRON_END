@@ -2,10 +2,14 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-
+import {BrowserRouter} from 'react-router-dom';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+      <BrowserRouter future={{v7_startTransition: true, v7_relativeSplatPath: true}}>
+        <App />
+      </BrowserRouter>
   </StrictMode>,
 )
+
+// el feature de BrowserRouter future es para habilitar las nuevas funcionalidades de react-router-dom v7

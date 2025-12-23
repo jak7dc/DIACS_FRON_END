@@ -1,24 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 
 export default function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const login = async (username, password)=>{
-    try {
-      const formdata = new FormData();
-      formdata.append("username", username);
-      formdata.append("password", password);
-      const response = await fetch("http://localhost:8001/users/login", {
-        method: "POST",
-        body: formdata,
-      })
-      const data = await response.json();
-      console.log("Login response:", data);
-      } catch (error) {
-      console.error("Error during login:", error);    
-      }
+    navigate("/");
     }
 
   return (
