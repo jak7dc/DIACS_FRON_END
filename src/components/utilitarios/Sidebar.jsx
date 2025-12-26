@@ -47,10 +47,10 @@ function SidebarOpen(props) {
   const {menucontent, subMenuContent, setIsOpen, submenu, setSubmenu} = props;
   return (
     <>
-      <aside className="px-0 py-0 fixed top-0 left-0 h-screen w-94 h-screen bg-gray-100 border-r-1 border-blue-800 flex flex-col p-4">
+      <aside className="px-0 py-0 fixed top-0 left-0 h-screen w-94 bg-gray-100 border-r border-blue-800 flex flex-col p-4">
       
         {/* CABEZA */}
-        <div className="border-b-1 h-15 px-6 flex items-center gap-3 border-blue-800">
+        <div className="border-b h-15 px-6 flex items-center gap-3 border-blue-800">
           <button 
             onClick={()=>{setIsOpen(false)}}
             className="h-10 w-10 rounded-md flex items-center justify-center hover:cursor-pointer">
@@ -64,12 +64,12 @@ function SidebarOpen(props) {
 
         {/* MENU */}
         <div className="flex h-full">
-          <div className="w-1/3 border-r-1 border-blue-800/50 flex flex-col px-2">
+          <div className="w-1/3 border-r border-blue-800/50 flex flex-col px-2">
             {menucontent.map((item, index) => (
               <div key={index} className="p-2 flex flex-col ">
                 {index == submenu ? (
-                  <button className="p-3 border-l-2 border-blue-100/0 flex flex-col items-center gap-1
-                                    rounded-r-lg w-full text-left border-l-2 
+                  <button className="p-3 border-l-2 flex flex-col items-center gap-1
+                                    rounded-r-lg w-full text-left
                                     border-blue-800/50" >
                   {item.icon}
                   <p className="text-base">{item.label}</p>
@@ -105,7 +105,7 @@ function SidebarOpen(props) {
         
       
         {/* FOOTER */}
-        <div className="mt-auto text-xs text-gray-500 border-t-1 border-blue-800/50">
+        <div className="mt-auto text-xs text-gray-500 border-t border-blue-800/50">
           <p className="p-2 px-6" >© 2025 DIACS V.0.1</p>
         </div>
       </aside>  
@@ -117,9 +117,9 @@ function SidebarClosed(props) {
   const {menucontent, setIsOpen} = props; 
   return(
     <>
-      <aside className="px-0 py-0 fixed top-0 left-0 h-screen w-18 h-screen bg-gray-100 border-r-1 border-blue-800 flex flex-col p-4">
+      <aside className="px-0 py-0 fixed top-0 left-0 w-18 h-screen bg-gray-100 border-r border-blue-800 flex flex-col p-4">
           
-            <div className="flex justify-center gap-3 border-b-1 h-12 m-1 px-6 items-center border-blue-800/50">
+            <div className="flex justify-center gap-3 border-b h-12 m-1 px-6 items-center border-blue-800/50">
               <button 
                 onClick={()=>{setIsOpen(true)}}
                 className="h-14 rounded-md flex items-center justify-center hover:cursor-pointer">
