@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 // w-screen mx-0 max-w-7xl px-0 md:px-0
 
 export function Navbar() {
@@ -25,7 +24,7 @@ export function Navbar() {
           <div className="hidden md:flex gap-4">
             <Link
               to="/login"
-              className="w-39 text-center rounded-lg border-1 border-blue-800/50 px-4 py-2 text-sm text-blue-950 
+              className="w-39 text-center rounded-lg border border-blue-800/50 px-4 py-2 text-sm text-blue-950 
                           hover:bg-blue-950 hover:text-gray-100 transition">
               Cerrar Sesión
             </Link>
