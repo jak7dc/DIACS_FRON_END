@@ -3,6 +3,7 @@ import Sidebar from "../components/utilitarios/Sidebar.jsx";
 import Table from "../components/utilitarios/Table.jsx";
 import Cabecera from "../components/Cabecera.jsx";
 import Boton from "../components/utilitarios/Boton.jsx";
+import { useAuth } from "../context/AuthContext.jsx";
 
 // "min-h-screen bg-gray-950 text-gray-100"
 
@@ -60,7 +61,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* <Hero /> */}
       </div>
     </div>
   );

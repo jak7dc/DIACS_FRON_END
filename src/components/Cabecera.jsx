@@ -4,8 +4,6 @@ import Modal from "./utilitarios/Modal";
 import Table from "./utilitarios/Table";
 import Formulario from "./utilitarios/Formulario";
 
-//commit de prueba
-
 const Cabecera = () => {
   const [open, setOpen] = useState(false);
   const [cliente, setCliente] = useState();
@@ -47,7 +45,7 @@ const Cabecera = () => {
     { id: 3, name: "C" },
     { id: 4, name: "D" },
   ];
-  const [selecData, setSelecData] = useState(clientes);
+  const [selectData, setSelectData] = useState(clientes);
 
   const handleRowClick = (cliente) => {
     setCliente(cliente);
@@ -59,13 +57,13 @@ const Cabecera = () => {
         abrir={open}
         cerrar={() => setOpen(false)}
         contenido={
-          open == "clientes" ? <Table labels={label} data={selecData} /> : <Formulario title="Datos de producto" fields={formData}/>
+          open == "clientes" ? <Table labels={label} data={selectData} /> : <Formulario title="Datos de producto" fields={formData}/>
         }
         acciones={
           open == "clientes" ? (
             <div className="flex gap-4">
-              <Boton name="Clientes" click={() => setSelecData(clientes)} />
-              <Boton name="Bodegas" click={() => setSelecData(bodegas)} />
+              <Boton name="Clientes" click={() => setSelectData(clientes)} />
+              <Boton name="Bodegas" click={() => setSelectData(bodegas)} />
             </div>
           ) : null
         }
